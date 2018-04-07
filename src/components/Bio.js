@@ -19,7 +19,7 @@ class Bio extends React.Component {
           src="https://en.gravatar.com/userimage/123141848/d17f0105a97257400b42b5643422965a.jpeg"
           alt={`Kyle Mathews`}
           style={{
-            marginRight: rhythm(1 / 2),
+            marginLeft: rhythm(1 / 2),
             marginBottom: 0,
             width: rhythm(2),
             height: rhythm(2),
