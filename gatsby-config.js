@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
-    author: 'Kyle Mathews',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    title: 'تورج خطیبی',
+    author: 'تورج خطیبی',
+    description: 'دغدغه‌های حل‌شده و حل‌شدنی یک توسعه‌دهنده',
+    siteUrl: 'https://tkhatibi.github.io/',
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: '/blog',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
