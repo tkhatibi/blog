@@ -48,7 +48,7 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "rm -rf .cache public",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master",
+    "deploy": "npm run clean && gatsby build --prefix-paths && gh-pages -d public",
     "dev": "gatsby develop",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
