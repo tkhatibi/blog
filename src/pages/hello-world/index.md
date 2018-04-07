@@ -1,21 +1,63 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
+title: سلام دنیا!
+date: "2018-04-07T21:12:03.284Z"
 ---
 
-This is my first post on my new fake blog! How exciting!
+چندین ساله مقاله‌های خوبی که می‌خونم رو یا دارم با
+<a href="https://getpocket.com/" target="_blank">Pocket</a>
+ذخیره می‌کنم،
+یا اگه
+<a href="http://medium.com" target="_blank">Medium</a>
+بود با خود مدیوم بوکمارک می‌کنم،
+یا توی بوکمارک‌های مرورگرم اضافه می‌کنم،
+یا اگه کد و این‌جور چیزا بود یه فولدر درست می‌کردم اونجا نگه‌شون می‌داشتم،
+یا توی کد پروژه‌هام چیزایی که یاد می‌گرفتم رو کامنت می‌کردم
+که بعدا اگر لازم شد برم اون کامنت رو از اون پروژه پیدا کنم و بخونم،
+یه سری چیزای دیگه رو با یه کانال تلگرام شخصی (بله به همین متناقضی) آرشیو می‌کردم،
+این اواخر هم که مثلا یکم سازمان‌یافته‌تر می‌خواستم کار کنم با
+<a href="https://boostnote.io/" target="_blank">Boostnote</a>،
+کد و
+<a href="https://en.wikipedia.org/wiki/Markdown" target="_blank">Markdown</a>
+و اینجور چیزا رو ذخیره می‌کردم،
+و البته هزار تا جای دیگه که خودمم دیگه خبری ازشون ندارم.
 
-I'm sure I'll write a lot more interesting things in the future.
+با اینحال هیچ‌کدوم این راه‌ها برام قابلیت استفاده مجدد نداشتند.
+یعنی دوباره سرچ کردن اون موردی که دنبالش بودم بین issue ها و سوالای
+stackoverflow
+و انجمن‌ها و مقاله‌ها و ... برام راحت‌تر بود.
+چون اونا یه نظمی داشتند که روش‌های من فاقد اون نظم بودن،
+و از یه طرف می‌دونستم که بلاگ این مشکلم رو حل می‌کنه.
+چون حداقل برای حفظ ظاهر هم که شده مجبورم این یکی رو منظم‌تر مدیریت کنم،
+که موقع نیاز حداقل توی وقت خودم صرفه‌جویی بشه.
+کما اینکه شاید یه روزی، یه جایی، روی یه صندلی‌ای، تو یه موقعیت خاصی به درد کسی خورد.
 
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
+و بالاخره امروز با دم دست‌ترین ابزارهای ممکن، تصمیمم رو عملی کردم.
+لذا مفتخرم از همین تریبون اعلام کنم: سلام دنیا!
 
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
+![hello world](./hello-world.jpg)
 
-![Chinese Salty Egg](./salty_egg.jpg)
+**پ.ن:** این بلاگ قدرت گرفته از
+<a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>
+هست و اگه شما هم دنبال یه راه راحت و ساده و بهینه می‌گردین
+که بلاگ یا مستندات خودتون رو منتشر کنید،
+پیشنهاد می‌کنم به عنوان یه گزینه بهش نگاه بندازید.
+بقیه اون ابزارهای دم دستی هم
+<a href="https://git-scm.com/" target="_blank">Git</a>
+و
+<a href="https://pages.github.com/" target="_blank">Github Pages</a>
+و
+<a href="https://reactjs.org/" target="_blank">React</a>
+هستند (چون خود گتسبی هم با ریکت کار می‌کنه).
+و اگر دوست داشتید سریع‌تر از من بلاگ‌تون رو آماده کنید
+<a href="https://github.com/tkhatibi/blog.github.io/" target="_blank">اینجا</a>
+سورس کامل بلاگ براتون قابل دسترس هست.
+سر فرصت مستنداتش رو هم اضافه ‌میکنم.
+
+**پ.ن ۲:**
+فعلا این بلاگ فاقد خیلی چیزهاست.
+منتها چون می‌خواستم اولین پست رو شنبه منتشر کنم،
+باید از قید فوتر و فونت و
+<a href="https://disqus.com/" target="_blank">Disqus</a>
+و این‌جور مسائل میزدم.
+
+سال و شنبه‌های خوبی داشته باشید!
