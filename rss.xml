@@ -1,4 +1,280 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[بلاگ تورج خطیبی]]></title><description><![CDATA[دغدغه‌های حل‌شده و حل‌شدنی یک توسعه‌دهنده]]></description><link>https://tkhatibi.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Sat, 07 Apr 2018 18:13:05 GMT</lastBuildDate><item><title><![CDATA[سلام دنیا!]]></title><description><![CDATA[چندین ساله مقاله‌های خوبی که می‌خونم رو یا دارم با
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[تورج خطیبی]]></title><description><![CDATA[دغدغه‌های حل‌شده و حل‌شدنی یک توسعه‌دهنده]]></description><link>https://tkhatibi.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Sat, 02 Jun 2018 10:47:23 GMT</lastBuildDate><item><title><![CDATA[ایجاد ماژول‌های جاواسکریپت]]></title><description><![CDATA[چند وقت پیش نیاز بود یه ماژول جاواسکریپتی برای تبدیل متن عربی به فارسی بنویسم،
+که نتیجه‌ش شد
+ arabic-to-persian…]]></description><link>https://tkhatibi.github.io//create-js-module/</link><guid isPermaLink="false">https://tkhatibi.github.io//create-js-module/</guid><pubDate>Sat, 02 Jun 2018 14:15:00 GMT</pubDate><content:encoded>&lt;p&gt;چند وقت پیش نیاز بود یه ماژول جاواسکریپتی برای تبدیل متن عربی به فارسی بنویسم،
+که نتیجه‌ش شد
+&lt;a href=&quot;https://www.npmjs.com/package/arabic-to-persian&quot;&gt;arabic-to-persian&lt;/a&gt;.
+ماژول فوق‌العاده ساده‌ایه،
+ولی چند تا چیز خوب باهاش یاد گرفتم،
+که چون دوست دارم کامیت‌های ماژول بعدیم مرتب‌تر باشه،
+باید ترتیب کارها رو برای خودم مستند می‌کردم.
+پس شد آنچه شد.&lt;/p&gt;
+&lt;h2&gt;دور زدن config ها&lt;/h2&gt;
+&lt;p&gt;در فرآیند توسعه (خواه ماژول، خواه یک اپلیکیشن) ابزارهایی داریم تحت عنوان
+task runner
+که برای خودکارسازی کارهای روتین، حوصله‌سربر و از زیردست‌دررو استفاده می‌شن.
+عموما این تسک‌رانرها با جاواسکریپت نوشته شدند،
+ولی می‌تونید در هر پروژه‌ای با هر زبان و فریم‌ورکی ازشون استفاده کنید.
+grunt و
+gulp
+نمونه‌ای از این ابزارها هستند.
+با اومدن node و npm نقش این ابزارها کمتر شد،
+چرا که خیلی از این کارها رو npm scripts هم برای توسعه‌دهنده‌ها انجام می‌ده.
+اما این کارهای روتین مثلا یعنی چه کارهایی؟&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;اجرای تست‌ها قبل از هر کامیت&lt;/li&gt;
+&lt;li&gt;تهیه گزارش تست‌ها&lt;/li&gt;
+&lt;li&gt;بررسی و یکپارچه‌سازی استایل کدها قبل از هر کامیت&lt;/li&gt;
+&lt;li&gt;یکپارچه‌سازی عنوان و متن کامیت‌ها&lt;/li&gt;
+&lt;li&gt;ساخت نسخه‌های مختلف برای پلتفرم‌های مختلف&lt;/li&gt;
+&lt;li&gt;بهینه‌سازی نسخه‌ها&lt;/li&gt;
+&lt;li&gt;انتشار نسخه‌ها&lt;/li&gt;
+&lt;li&gt;تهیه مستندات&lt;/li&gt;
+&lt;li&gt;انتشار مستندات&lt;/li&gt;
+&lt;li&gt;تعیین شماره نسخه بعدی نرم‌افزار طبق &lt;a href=&quot;https://semver.org&quot;&gt;semver&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ضمیمه تغییرات هر نسخه به همراه commit مربوطه، issue مربوطه و …&lt;/li&gt;
+&lt;li&gt;و الی ماشالله&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/etc-722330625a8a4793c08b5695efab52d0.gif&quot; alt=&quot;etc&quot;&gt;&lt;/p&gt;
+&lt;p&gt;خبر بد اینه که باید به task runner بفهمونید چه کارهایی انجام بده
+و این خودش مستلزم کانفیگ پلاگین‌ها و ابزارهای دیگه‌ایه
+که اگر نگم انرژی‌ای که ازتون می‌گیره
+بیشتر از توسعه خود ماژول نیست،
+کم‌تر هم نیست.&lt;/p&gt;
+&lt;p&gt;و خبر خوب اینکه
+&lt;a href=&quot;https://github.com/alexjoverm/typescript-library-starter&quot;&gt;typescript-library-starter&lt;/a&gt;
+این کانفیگ‌ها رو براتون انجام داده.
+من در ادامه پست با این boilerplate کار می‌کنم،
+تا با هم کانفیگ‌ها رو دور بزنیم،
+و روی ابزارهای مورد نیازمون تمرکز کنیم.
+طبیعتا وقتی کاربرد این ابزارها رو یاد بگیرید،
+دیگه محدود به این boilerplate نخواهید بود
+و می‌تونید بر حسب نیاز از این ابزارها در پروژه‌های دیگه استفاده بکنید یا نکنید.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;سلب مسئولیت: کانفیگ‌ها در جاواسکریپت به سمت تموم شدن میل می‌کنن، ولی تموم نمی‌شن.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;اما چرا تایپ‌اسکریپت؟
+مگه عنوان پست &lt;strong&gt;ایجاد ماژول‌های جاواسکریپت&lt;/strong&gt; نبود؟
+خب این سه تا علت داره:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;اول اینکه خدعه کردم.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;دوم اینکه بنده از این جاواسکریپت خیلی بدم میاد.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;و در آخر اینکه خب تایپ‌اسکریپت همون جاواسکریپت سروسامون‌یافته‌تر هست.
+منتها به خاطر استاتیک‌تایپ بودنش
+IDE ها می‌تونن با نمایش پیشنهادها و نوع پارامترهای مجاز،
+در روند توسعه کمک‌تون کنند،
+که خود این مسئله منجر به کاهش خطاها در زمان اجرا،
+ساختار منطقی‌تر، کدهای خواناتر و نگهداری ساده‌تر میشه.
+جدای از تمام برتری‌های فنی،
+برنامه‌نویسی با تایپ‌اسکریپت لذت‌بخش‌تر هم هست.
+پس اگر یک هفته برای یادگیری تایپ‌اسکریپت کنار بذارید،
+به خودتون،
+سایر مشارکت‌کننده‌ها،
+توسعه‌دهنده‌هایی که از کتابخا‌نه‌تون استفاده می‌کنند،
+و جامعه بشریت کمک بزرگی کردید.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;راه‌اندازی پروژه&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;اول به
+&lt;a href=&quot;https://github.com/new&quot;&gt;اینجا&lt;/a&gt;
+برید و یه مخزن جدید بسازید.
+بهتره نام مخزن بصورت &lt;code class=&quot;language-text&quot;&gt;kebab-case.js&lt;/code&gt; باشه.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;دستورهای زیر رو به ترتیب اجرا کنید،
+و وقتی ازتون نام پروژه پرسیده شد،
+پسوند &lt;code class=&quot;language-text&quot;&gt;js&lt;/code&gt; رو وارد نکنید:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-command&quot;&gt;&lt;code class=&quot;language-command&quot;&gt;git clone https://github.com/alexjoverm/typescript-library-starter.git YOUR_REPOSITORY
+cd YOUR_REPOSITORY
+npm install
+git remote set-url origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;الان می‌تونید اولین کامیت خودتون رو ثبت کنید.
+ولی با یه راه باحال‌تر اینکار رو انجام بدید:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-command&quot;&gt;&lt;code class=&quot;language-command&quot;&gt;git add .
+npm run commit&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;  سوال اول مربوط به نوع تغییرات هست.&lt;/p&gt;
+&lt;p&gt;  سوال دوم از شما می‌خواد مشخص کنید که این تغییرات مرتبط با کدوم فرآیند، پلتفرم، وابستگی،‌ کامپوننت یا … پروژه‌ست.&lt;/p&gt;
+&lt;p&gt;  سوال سوم و چهارم به ترتیب شرح خلاصه و مفصل تغییرات شماست.&lt;/p&gt;
+&lt;p&gt;  سوال پنجم مربوط به
+&lt;a href=&quot;https://en.wiktionary.org/wiki/breaking_change&quot;&gt;breaking change&lt;/a&gt;
+های پروژه‌ست.
+تغییراتی که در این کامیت منجر به ناسازگاری با نسخه‌های قبلی شده‌اند رو شرح بدید.
+اما اگر
+&lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%B3%D8%A7%D8%B2%DA%AF%D8%A7%D8%B1%DB%8C_%D8%B9%D9%82%D8%A8%D8%B1%D9%88&quot;&gt;backward compatible&lt;/a&gt;
+بود جوابش رو ندید.&lt;/p&gt;
+&lt;p&gt;  و در سوال آخر اگر این کامیت برای بستن issue خاصی ثبت می‌شه
+شماره issue مربوطه رو با فرمت مثلا &lt;code class=&quot;language-text&quot;&gt;#64&lt;/code&gt; ذکر کنید.&lt;/p&gt;
+&lt;p&gt;  حالا ببینید محتوای کامیت تولید شده چی هست:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-command&quot;&gt;&lt;code class=&quot;language-command&quot;&gt;git log&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;  از این به بعد کامیت‌های شما و بقیه مشارکت‌کننده‌ها استایل مشترکی خواهند داشت.
+و شاید باورتون نشه، ولی این کمترین کاری هست که
+&lt;a href=&quot;http://commitizen.github.io/cz-cli/&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;commitizen&lt;/code&gt;&lt;/a&gt;
+داره براتون انجام می‌ده.
+با وظیفه مهم‌ترش وقتی آشنا می‌شید،
+که &lt;code class=&quot;language-text&quot;&gt;semantic-release&lt;/code&gt; آماده به کار شده باشه.
+پس اندکی صبر، اون قسمتش نزدیکست.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://semantic-release.gitbooks.io/semantic-release/&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;semantic-release&lt;/code&gt;&lt;/a&gt;
+کامیت‌های منتشرنشده پروژه شما رو می‌خونه،
+طبق مقادیری که ‍‍&lt;code class=&quot;language-text&quot;&gt;commitizen&lt;/code&gt; به کمک
+&lt;a href=&quot;https://github.com/conventional-changelog/conventional-changelog&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;conventional-changelog&lt;/code&gt;&lt;/a&gt;
+به متن این کامیت‌ها اضافه کرده،
+تغییرات &lt;code class=&quot;language-text&quot;&gt;major&lt;/code&gt; و &lt;code class=&quot;language-text&quot;&gt;manor&lt;/code&gt; و &lt;code class=&quot;language-text&quot;&gt;patch&lt;/code&gt; رو تشخیص می‌ده،
+گزارش تغییرات نسخه جدید رو آماده می‌کنه،
+و در آخر نتیجه رو نشونتون می‌ده.&lt;/p&gt;
+&lt;p&gt;این بود وظیفه مهم‌تر &lt;code class=&quot;language-text&quot;&gt;commitizen&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/setup-933c145ddbb62713d32afb8cf0de4de6.gif&quot; alt=&quot;setup&quot;&gt;&lt;/p&gt;
+&lt;p&gt;  از اونجایی که برای استفاده از
+&lt;code class=&quot;language-text&quot;&gt;semantic-release&lt;/code&gt;
+و انتشار مستندات
+باید آدرس مخزن پروژه تعریف شده باشه،
+فایل &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; رو باز کنید و در قسمت &lt;code class=&quot;language-text&quot;&gt;git.url&lt;/code&gt; آدرس
+&lt;code class=&quot;language-text&quot;&gt;https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git&lt;/code&gt;
+رو وارد کنید.&lt;/p&gt;
+&lt;p&gt;  اگر از ویندوز استفاده می‌کنید، قبل از دستورهای بعدی این دستور رو اجرا کنید:
+(من امکان تست این مورد رو نداشتم و صرفا چون در
+&lt;a href=&quot;https://github.com/alexjoverm/typescript-library-starter#automatic-releases&quot;&gt;مستندات&lt;/a&gt;
+ذکر شده بود، این رو اضافه کردم)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-command&quot;&gt;&lt;code class=&quot;language-command&quot;&gt;npm install --global --production windows-build-tools&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;  دستورات زیر رو به ترتیب اجرا کنید (حتی شما یونیکسی عزیز)،
+و وقتی ازتون پرسید &lt;code class=&quot;language-text&quot;&gt;travis.yml&lt;/code&gt; رو ایجاد کنه یا نه،
+&lt;code class=&quot;language-text&quot;&gt;NO&lt;/code&gt; رو انتخاب کنید، چون زحمت کانفیگ این فایل از قبل کشیده شده.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-command&quot;&gt;&lt;code class=&quot;language-command&quot;&gt;npm run semantic-release-prepare
+npm install -g semantic-release-cli
+semantic-release-cli setup&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;  با دستور اول دو تا &lt;code class=&quot;language-text&quot;&gt;git hook&lt;/code&gt; جدید به لیست اسکریپت‌های &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; اضافه می‌شن.
+&lt;code class=&quot;language-text&quot;&gt;prepush&lt;/code&gt; که قبل از هر پوش صحت build و پوشش تست‌ها و استایل کدها رو بررسی می‌کنه
+تا ضمانت کنه تغییرات شما منجر به fail شدن فرآیند ساخت نمی‌شه،
+و &lt;code class=&quot;language-text&quot;&gt;commitmsg&lt;/code&gt; که به شما اجازه اجرای &lt;code class=&quot;language-text&quot;&gt;git commit&lt;/code&gt; رو نمی‌ده و
+به جاش &lt;code class=&quot;language-text&quot;&gt;npm run commit&lt;/code&gt; رو بهتون پیشنهاد می‌ده.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis CI&lt;/a&gt;
+ابزاری برای خودکارسازی فرآیندهای
+تست، ساخت و انتشار پروژه هست.
+برای فعال‌سازی CI پروژه
+&lt;a href=&quot;https://travis-ci.org/profile/&quot;&gt;اینجا&lt;/a&gt;
+برید و سوییچ مخزن‌تون رو روشن کنید.&lt;/p&gt;
+&lt;p&gt;بعد به
+&lt;a href=&quot;https://github.com/settings/tokens&quot;&gt;اینجا&lt;/a&gt;
+برید و یک توکن جدید ایجاد کنید.
+دقت کنید که در قسمت &lt;code class=&quot;language-text&quot;&gt;Select scopes&lt;/code&gt; حتما &lt;code class=&quot;language-text&quot;&gt;repo&lt;/code&gt; و مشتقاتش انتخاب شده باشند.
+این توکن دیگه به شما نشون داده نمی‌شه،
+پس در حفظ و نگهداری توکن کوشا باشید و اون رو در جایی امن نگه‌داری کنید.
+طبیعتا این جای امن داخل پروژه نخواهد بود.&lt;/p&gt;
+&lt;p&gt;برای فعالسازی &lt;code class=&quot;language-text&quot;&gt;semantic-release&lt;/code&gt; به یه توکن &lt;code class=&quot;language-text&quot;&gt;npm&lt;/code&gt; هم نیاز دارید.
+اگر هنوز عضو سایت &lt;code class=&quot;language-text&quot;&gt;npm&lt;/code&gt; نیستید از
+&lt;a href=&quot;https://www.npmjs.com/signup&quot;&gt;اینجا&lt;/a&gt;
+می‌تونید ثبت‌نام کنید.
+بعد دستور زیر رو اجرا کنید
+و برای توکن ایجاد شده، همون مواردی که برای توکن گیت‌هاب اشاره کردم رو عینا رعایت کنید.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-command&quot;&gt;&lt;code class=&quot;language-command&quot;&gt;npm token create&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;  بعد به آدرس
+&lt;code class=&quot;language-text&quot;&gt;https://travis-ci.org/YOUR_USERNAME/YOUR_REPOSITORY/settings&lt;/code&gt;
+برید و در قسمت &lt;code class=&quot;language-text&quot;&gt;Environment Variables&lt;/code&gt;
+مقدار توکن گیت‌هاب رو با عنوان &lt;code class=&quot;language-text&quot;&gt;GH_TOKEN&lt;/code&gt; به لیست متغیرها اضافه کنید.
+همین کار رو مجددا برای توکن &lt;code class=&quot;language-text&quot;&gt;npm&lt;/code&gt; و این‌بار با عنوان &lt;code class=&quot;language-text&quot;&gt;NPM_TOKEN&lt;/code&gt; تکرار کنید.
+حواستون باشه سوییچ ‍‍‍&lt;code class=&quot;language-text&quot;&gt;Display value in build log&lt;/code&gt; در هر دو مورد خاموش باشه،
+چرا که درغیراینصورت اون حفظ و نگه‌داری‌ای که بهش اشاره شد به طور کامل نقض می‌شه.&lt;/p&gt;
+&lt;p&gt;  از این به بعد با هربار push و pull request،
+تراویس وظایفی که در &lt;code class=&quot;language-text&quot;&gt;travis.yml&lt;/code&gt; تعریف شده رو براتون انجام می‌ده،
+کارهایی مثل تست و به‌روزرسانی coverage و مستندات پروژه.
+اگر نیاز بود وظایف دیگه‌ای هم به این لیست اضافه شه، به
+&lt;a href=&quot;https://docs.travis-ci.com/&quot;&gt;مستندات تراویس&lt;/a&gt;
+مراجعه کنید.&lt;/p&gt;
+&lt;p&gt;  برای اینکه نتیجه آخرین اجرای CI هم همیشه در معرض دید باشه،
+بهتره که برچسب build رو به &lt;code class=&quot;language-text&quot;&gt;README.md&lt;/code&gt; پروژه اضافه کنید:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;#&lt;/span&gt; PROJECT_NAME&lt;/span&gt;
+
+[![Build Status](https://travis-ci.org/YOUR&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;USERNAME/YOUR&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;/span&gt;REPOSITORY.svg?branch=master)](https://travis-ci.org/YOUR&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;USERNAME/YOUR&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;/span&gt;REPOSITORY)
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;coveralls&lt;/code&gt; هم ابزاری برای رصد کردن کیفیت کلی پروژه هست،
+و برای پروژه‌های متن‌باز رایگانه.
+اگر هنوز عضو سایتش نیستید، از
+&lt;a href=&quot;https://coveralls.io/sign-up&quot;&gt;اینجا&lt;/a&gt;
+می‌تونید ثبت‌نام کنید.&lt;/p&gt;
+&lt;p&gt;برای فعال‌سازی coverage پروژه
+&lt;a href=&quot;https://coveralls.io/repos/new&quot;&gt;اینجا&lt;/a&gt;
+برید و سوییچ مخزن نگهدارنده پروژه رو روشن کنید.&lt;/p&gt;
+&lt;p&gt;و در آخر به برچسب build که در قدم قبلی به &lt;code class=&quot;language-text&quot;&gt;README.md&lt;/code&gt; اضافه کردید،
+برچسب coverage رو هم اضافه کنید:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;[![Coverage Status](https://coveralls.io/repos/github/YOUR&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;USERNAME/YOUR&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;/span&gt;REPOSITORY/badge.svg?branch=master)](https://coveralls.io/github/YOUR&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;USERNAME/YOUR&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;/span&gt;REPOSITORY?branch=master)
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;اگر به ویژگی‌های فانکشنال مثل &lt;code class=&quot;language-text&quot;&gt;Promise&lt;/code&gt; در کتابخانه‌تون نیاز داشتید،
+می‌تونید از &lt;code class=&quot;language-text&quot;&gt;polyfill&lt;/code&gt; هایی مثل
+&lt;a href=&quot;https://github.com/zloirock/core-js&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;core-js&lt;/code&gt;&lt;/a&gt;
+استفاده کنید. برای نصب دستور زیر رو اجرا کنید:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-command&quot;&gt;&lt;code class=&quot;language-command&quot;&gt;npm i -D core-js&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;  و برای استفاده بالای &lt;code class=&quot;language-text&quot;&gt;entry script&lt;/code&gt; (فایلی که برنامه از اون شروع می‌شه) کتابخانه،
+&lt;code class=&quot;language-text&quot;&gt;polyfill&lt;/code&gt; های مورد نیازتون رو &lt;code class=&quot;language-text&quot;&gt;import&lt;/code&gt; کنید:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;core-js/fn/array/find&quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;core-js/fn/string/includes&quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;core-js/fn/promise&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h2&gt;چند تا نکته&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;به آدرس &lt;code class=&quot;language-text&quot;&gt;https://YOUR_USERNAME.github.io/YOUR_REPOSITORY&lt;/code&gt; برید
+و از دیدن مستنداتی که
+&lt;a href=&quot;http://typedoc.org/&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;typedoc&lt;/code&gt;&lt;/a&gt;
+براتون ایجاد کرده لذت ببرید.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;اگر کتابخانه شما وابسته به ماژولی از نوع &lt;code class=&quot;language-text&quot;&gt;peerDependeny&lt;/code&gt;
+(ماژولی که لازم نیست در خروجی نهایی &lt;code class=&quot;language-text&quot;&gt;import&lt;/code&gt; بشه)
+بود،
+فایل &lt;code class=&quot;language-text&quot;&gt;rollup.config.js&lt;/code&gt; رو باز کنید و نام اون ماژول رو به آرایه &lt;code class=&quot;language-text&quot;&gt;external&lt;/code&gt; اضافه کنید.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;تا می‌تونید از نصب وابستگی‌های پروژه به صورت &lt;code class=&quot;language-text&quot;&gt;global&lt;/code&gt; پرهیز کنید،
+و کامندهای مرتبط با هر ماژول رو به &lt;code class=&quot;language-text&quot;&gt;npm scripts&lt;/code&gt; اضافه کنید،
+اینجوری مشارکت برای سایر توسعه‌دهنده‌ها راحت‌تر می‌شه.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;انتشار کتابخانه&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-command&quot;&gt;&lt;code class=&quot;language-command&quot;&gt;npm publish&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/publish-9c5b49646e9365d80fb154f571043eb8.gif&quot; alt=&quot;publish&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[سلام دنیا!]]></title><description><![CDATA[چندین ساله مقاله‌های خوبی که می‌خونم رو یا دارم با
  Pocket 
 ذخیره می‌کنم،
 یا اگه
@@ -33,7 +309,7 @@ stackoverflow
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/hello-world-ea73d8d8fc44d0fb032f4aac00e59829-a0e60.jpg&quot;
+    href=&quot;/blog/static/hello-world-f0ca27c03a99db6b1cbcba243aafa0ae-538d8.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -45,18 +321,19 @@ stackoverflow
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUCAwQG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAB/9oADAMBAAIQAxAAAAFdrX0BdARLP//EABoQAAICAwAAAAAAAAAAAAAAAAACARIRIUL/2gAIAQEAAQUCsotDEHI25//EABcRAQADAAAAAAAAAAAAAAAAAAACESH/2gAIAQMBAT8Blin/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQIBAT8BjX//xAAcEAABAwUAAAAAAAAAAAAAAAAAAhEhAQMQEoH/2gAIAQEABj8Ci2Pq0kpSVxw//8QAGhABAAIDAQAAAAAAAAAAAAAAAQARIUFRof/aAAgBAQABPyEQDINxoCbUB3HSnjHylvYQFLaT/9oADAMBAAIAAwAAABAEH//EABYRAQEBAAAAAAAAAAAAAAAAAAABQf/aAAgBAwEBPxDBJf/EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAgBAgEBPxDFW//EABsQAQACAwEBAAAAAAAAAAAAAAEAESFBUTGh/9oACAEBAAE/EGwJEvBt+RkhicBuut7h6UXSzWcRo400yQYpSGAvyDKSxS3yf//Z&apos;); background-size: cover; display: block;&quot;
+      style=&quot;padding-bottom: 63.47826086956522%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAADTElEQVQ4y23T60+bZRjHcf6aGRK3jG0ctjLOE+pERkMHYZRxeMphhadHaEu7jjOllFJKoUMBX8jQgmHq5hyMlpN0YTCn2xjMiAmGSNSp0ZiYmOnXtmNGEl9cr+7kk+vwu2OKW1QoOkRyhQtk5eaSkp3DqexsjiYmcCIrHZlQQmHVRXLypeH3HCQZqSSlSpDXFyO0ViG01VDWWkN5ex1Kh54YpduE0tNEbccl7O3N1KiryC4sIjEjnVePHyPlTBgtLae4Vsv5coHTmekkSk5x0VSBwatD59bQ1GvA0KNF7VYTU+0xo+hqxDtnJLT5NsGNESw+BXEJyUhkryM2W+kYv4Yv6EfvaiMtNYOUhJNUWqvRejWITpEp/yi2cGNqtxgBTZTajQwuXObLv208/SnAR8EJYuOOEJ8mwer1MvbZTZaWbzG7GKCk6DxnkiQUG0q5Mmrj+vxNLENWNP1qdB7tC1DhMDN828THf46w/KyL7W+D9Pb0cbiiALm5ifFZP1uf32UpOEfB2TxOHIrF6rzM+pP7DE56UfVeimLafs1+hw4TV2fMhH5x8PAvF2NzIj3OAaZDC2TK8mhxdPPFyixjXie5qadxdXYSDM3TOtpCTU81eo8uiu2DL3bomTXxFQ5uPTZh7swm9sgh6nQGZufuMDDs44PpCd595y0mr43T3+2grElA7REPYP92qOgyMhxqYW6jHkvDa3wyYcPXreL4WWn4gu3sfbfLje1HBO7fQ5Yn4/ArsVRYlDT4DGjcmv8DGxlda2fMX8CnY838vvs1Pz99gP3qAJUWFatrIYI/7HB7YYb3SzIZkaehDMdGG4nNfzDNy9hErjy0ZGN5x8TjDz3szbzH9vUR1EaRMpuWtfVVAj/usLi+xHPnBTbELKoj4KD+AHhgh0OBJr7BxcPdVn7btDPhE0g+9yYlV8L5XF9j/vttplYXqD8nRRp/lHJLVXTkCBK58MuKguVOM/bpBm5sGdl8pgUM3HtUQUr+G8j1Kp5sbbH46x6Tmw8oqlQSnyOlslkVBjSoXWK0NJGKjFxm11HZ24BcI5CVX4h/qpY/nmtZCSnDfzaZOEkCKyt36RvpoK3PhKBScSw5iRKjgOg1o+o3UrdfKncj/wBpwJErDrRIWQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;hello world&quot;
         title=&quot;&quot;
-        src=&quot;/blog/static/hello-world-ea73d8d8fc44d0fb032f4aac00e59829-f8fb9.jpg&quot;
-        srcset=&quot;/blog/static/hello-world-ea73d8d8fc44d0fb032f4aac00e59829-e8976.jpg 148w,
-/blog/static/hello-world-ea73d8d8fc44d0fb032f4aac00e59829-63df2.jpg 295w,
-/blog/static/hello-world-ea73d8d8fc44d0fb032f4aac00e59829-f8fb9.jpg 590w,
-/blog/static/hello-world-ea73d8d8fc44d0fb032f4aac00e59829-a0e60.jpg 800w&quot;
+        src=&quot;/blog/static/hello-world-f0ca27c03a99db6b1cbcba243aafa0ae-fb8a0.png&quot;
+        srcset=&quot;/blog/static/hello-world-f0ca27c03a99db6b1cbcba243aafa0ae-1a291.png 148w,
+/blog/static/hello-world-f0ca27c03a99db6b1cbcba243aafa0ae-2bc4a.png 295w,
+/blog/static/hello-world-f0ca27c03a99db6b1cbcba243aafa0ae-fb8a0.png 590w,
+/blog/static/hello-world-f0ca27c03a99db6b1cbcba243aafa0ae-526de.png 885w,
+/blog/static/hello-world-f0ca27c03a99db6b1cbcba243aafa0ae-538d8.png 920w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -77,7 +354,7 @@ stackoverflow
 &lt;a href=&quot;https://reactjs.org/&quot; target=&quot;_blank&quot;&gt;React&lt;/a&gt;
 هستند (چون خود گتسبی هم با ریکت کار می‌کنه).
 و اگر دوست داشتید سریع‌تر از من بلاگ‌تون رو آماده کنید
-&lt;a href=&quot;https://github.com/tkhatibi/blog.github.io/&quot; target=&quot;_blank&quot;&gt;اینجا&lt;/a&gt;
+&lt;a href=&quot;https://github.com/tkhatibi/blog/&quot; target=&quot;_blank&quot;&gt;اینجا&lt;/a&gt;
 سورس کامل بلاگ براتون قابل دسترس هست.
 سر فرصت مستنداتش رو هم اضافه ‌میکنم.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;پ.ن ۲:&lt;/strong&gt;
