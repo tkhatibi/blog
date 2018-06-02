@@ -34,7 +34,7 @@ stackoverflow
 و بالاخره امروز با دم دست‌ترین ابزارهای ممکن، تصمیمم رو عملی کردم.
 لذا مفتخرم از همین تریبون اعلام کنم: سلام دنیا!
 
-![hello world](./hello-world.jpg)
+![hello world](./hello-world.png)
 
 **پ.ن:** این بلاگ قدرت گرفته از
 <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>
@@ -49,7 +49,7 @@ stackoverflow
 <a href="https://reactjs.org/" target="_blank">React</a>
 هستند (چون خود گتسبی هم با ریکت کار می‌کنه).
 و اگر دوست داشتید سریع‌تر از من بلاگ‌تون رو آماده کنید
-<a href="https://github.com/tkhatibi/blog.github.io/" target="_blank">اینجا</a>
+<a href="https://github.com/tkhatibi/blog/" target="_blank">اینجا</a>
 سورس کامل بلاگ براتون قابل دسترس هست.
 سر فرصت مستنداتش رو هم اضافه ‌میکنم.
 
