@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[تورج خطیبی]]></title><description><![CDATA[دغدغه‌های حل‌شده و حل‌شدنی یک توسعه‌دهنده]]></description><link>https://tkhatibi.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Sat, 02 Jun 2018 10:47:23 GMT</lastBuildDate><item><title><![CDATA[ایجاد ماژول‌های جاواسکریپت]]></title><description><![CDATA[چند وقت پیش نیاز بود یه ماژول جاواسکریپتی برای تبدیل متن عربی به فارسی بنویسم،
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[تورج خطیبی]]></title><description><![CDATA[دغدغه‌های حل‌شده و حل‌شدنی یک توسعه‌دهنده]]></description><link>https://tkhatibi.github.io/</link><generator>RSS for Node</generator><lastBuildDate>Sat, 02 Jun 2018 11:22:47 GMT</lastBuildDate><item><title><![CDATA[ایجاد ماژول‌های جاواسکریپت]]></title><description><![CDATA[چند وقت پیش نیاز بود یه ماژول جاواسکریپتی برای تبدیل متن عربی به فارسی بنویسم،
 که نتیجه‌ش شد
  arabic-to-persian…]]></description><link>https://tkhatibi.github.io//create-js-module/</link><guid isPermaLink="false">https://tkhatibi.github.io//create-js-module/</guid><pubDate>Sat, 02 Jun 2018 14:15:00 GMT</pubDate><content:encoded>&lt;p&gt;چند وقت پیش نیاز بود یه ماژول جاواسکریپتی برای تبدیل متن عربی به فارسی بنویسم،
 که نتیجه‌ش شد
@@ -34,7 +34,7 @@ gulp
 &lt;li&gt;ضمیمه تغییرات هر نسخه به همراه commit مربوطه، issue مربوطه و …&lt;/li&gt;
 &lt;li&gt;و الی ماشالله&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;/etc-722330625a8a4793c08b5695efab52d0.gif&quot; alt=&quot;etc&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/etc-722330625a8a4793c08b5695efab52d0.gif&quot; alt=&quot;etc&quot;&gt;&lt;/p&gt;
 &lt;p&gt;خبر بد اینه که باید به task runner بفهمونید چه کارهایی انجام بده
 و این خودش مستلزم کانفیگ پلاگین‌ها و ابزارهای دیگه‌ایه
 که اگر نگم انرژی‌ای که ازتون می‌گیره
@@ -140,7 +140,7 @@ npm run commit&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;این بود وظیفه مهم‌تر &lt;code class=&quot;language-text&quot;&gt;commitizen&lt;/code&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;/setup-933c145ddbb62713d32afb8cf0de4de6.gif&quot; alt=&quot;setup&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/setup-933c145ddbb62713d32afb8cf0de4de6.gif&quot; alt=&quot;setup&quot;&gt;&lt;/p&gt;
 &lt;p&gt;  از اونجایی که برای استفاده از
 &lt;code class=&quot;language-text&quot;&gt;semantic-release&lt;/code&gt;
 و انتشار مستندات
@@ -212,8 +212,7 @@ semantic-release-cli setup&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;#&lt;/span&gt; PROJECT_NAME&lt;/span&gt;
 
-[![Build Status](https://travis-ci.org/YOUR&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;USERNAME/YOUR&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;/span&gt;REPOSITORY.svg?branch=master)](https://travis-ci.org/YOUR&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;USERNAME/YOUR&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;/span&gt;REPOSITORY)
-&lt;/code&gt;&lt;/pre&gt;
+[![Build Status](https://travis-ci.org/YOUR&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;USERNAME/YOUR&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;/span&gt;REPOSITORY.svg?branch=master)](https://travis-ci.org/YOUR&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;USERNAME/YOUR&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;/span&gt;REPOSITORY)&lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -230,8 +229,7 @@ semantic-release-cli setup&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
-      &lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;[![Coverage Status](https://coveralls.io/repos/github/YOUR&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;USERNAME/YOUR&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;/span&gt;REPOSITORY/badge.svg?branch=master)](https://coveralls.io/github/YOUR&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;USERNAME/YOUR&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;/span&gt;REPOSITORY?branch=master)
-&lt;/code&gt;&lt;/pre&gt;
+      &lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;[![Coverage Status](https://coveralls.io/repos/github/YOUR&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;USERNAME/YOUR&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;/span&gt;REPOSITORY/badge.svg?branch=master)](https://coveralls.io/github/YOUR&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;USERNAME/YOUR&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;/span&gt;REPOSITORY?branch=master)&lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;اگر به ویژگی‌های فانکشنال مثل &lt;code class=&quot;language-text&quot;&gt;Promise&lt;/code&gt; در کتابخانه‌تون نیاز داشتید،
@@ -247,8 +245,7 @@ semantic-release-cli setup&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;core-js/fn/array/find&quot;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;core-js/fn/string/includes&quot;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;core-js/fn/promise&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;core-js/fn/promise&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;h2&gt;چند تا نکته&lt;/h2&gt;
 &lt;ul&gt;
@@ -274,7 +271,7 @@ semantic-release-cli setup&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-command&quot;&gt;&lt;code class=&quot;language-command&quot;&gt;npm publish&lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/publish-9c5b49646e9365d80fb154f571043eb8.gif&quot; alt=&quot;publish&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[سلام دنیا!]]></title><description><![CDATA[چندین ساله مقاله‌های خوبی که می‌خونم رو یا دارم با
+&lt;p&gt;&lt;img src=&quot;/blog/publish-9c5b49646e9365d80fb154f571043eb8.gif&quot; alt=&quot;publish&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[سلام دنیا!]]></title><description><![CDATA[چندین ساله مقاله‌های خوبی که می‌خونم رو یا دارم با
  Pocket 
 ذخیره می‌کنم،
 یا اگه
